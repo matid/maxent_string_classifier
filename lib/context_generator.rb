@@ -7,7 +7,7 @@ module MaxentStringClassifier
 
     # jruby/joni && ruby1.9/oniguruma regexps are broken, so can't use POSIX [:punct:] class
     # http://jira.codehaus.org/browse/JRUBY-3581
-    PUNCT = Regexp.quote( "±§!@\#$%^&*()_-+={[}]:;\"'|\~`<,>.?/" )
+    PUNCT = Regexp.quote( "!@\#$%^&*()_-+={[}]:;\"'|\~`<,>.?/" )
 
     def initialize(featuresets, cleanup = nil)
       @featuresets = [*featuresets].compact
